@@ -1,24 +1,32 @@
-# Getting input from the user
-name = input("What is you name? ")
+# Initilizing a buch of strings in an array
+Shows = ["My name is jeff", "yeah buddy",
+         " you don't know Me son", "the man of the house  "]
 
-# remove whitespace of the string
-name = name.strip()
+# defining a main function
 
-# Capitalize the users name
-name = name.capitalize()
 
-# Split users name into first and second
-first, last = name.split(" ")
+def main():
+    # Loop to get individual string from the array
+    for show in Shows:
+        print(show.strip().capitalize())
 
-# Printing normally using Python
-print("Hello, World")
+    # Defining a new array to store cleaned strings
+    cleaned_Shows = []
+    for show in Shows:
 
-# Manipulating named Parameters of Print functions
-print("Hello, ", end="\n\n")  # What to put at the end of the print function
-print("world")
+        # Adding respective elements to the new array
+        cleaned_Shows.append(show.strip().title())
 
-# What to put after every parameter seperations
-print("Welcome to the chat,", last, sep="___")
+    # Displayig the new array of cleaned strings
+    print(', '.join(cleaned_Shows))
 
-# Printing formatted string
-print(f"Hello , {first}")
+
+# Calling main
+main()
+
+# All the string functions i learned
+# .capitalize()--> First character of string is capitalized
+# .title()--> Starting letters of all the words are capitalized
+# .strip()--> Removes whitespaces from both left and right side of the string
+# .append()--> Adds elemnts to the new array
+# .join()--> Joining the elements of the array as desired
