@@ -48,6 +48,3 @@ def user():
         x = int(input("Enter an even value: "))
         if x % 2 == 0:
             print("You've cracked the code!!!")
-
-
-user()
