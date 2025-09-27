@@ -36,7 +36,7 @@ def lists():
 
 
 # calling lists
-lists()
+# lists()
 
 
 def dictionaries():
@@ -61,6 +61,10 @@ def dictionaries():
     student_info["age"] = 17
     print("Insertion & modification:", student_info)
 
+    # Addinga and updating keys in dict
+    student_info.update({"age": 19, "Gender": "Male"})
+    print("Update and new key: ", student_info)
+
     # Removing a Key-Value pair
     del student_info["subjects"]
     print("Deletion of Key-Value pair: ", student_info)
@@ -70,6 +74,9 @@ def dictionaries():
     print("The Subjects: ", student_info.get("Subject"))
     # Altered output for missing key
     print("The age: ", student_info.get("age", "Not Available"))
+    # USing loop and keys() func
+    for val in student_info.keys():
+        print(val, ": ", student_info[val], sep="")
 
     # Clearing everything from student_info
     student_info.clear()
